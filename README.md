@@ -197,34 +197,35 @@ The model predicts the probability of a branch being structurally abnormal.
 
 ## Repository Structure
 
+```text
 AirwayQualityNet/
-
-|-- build_dataset.py
-
-|-- corruption_generator.py
-
-|-- feature_corruption_generator.py
-
-|-- merge_dataset.py
-
-|-- dataset_summary.py
-
-|-- train_mlp.py
-
 |
-
-|-- branch_features.csv
-
-|-- branch_labels.csv
-
-|-- training_dataset.csv
-
-|-- training_dataset_feature_corruption.csv
-
+|-- Dataset Construction
+|   |
+|   |-- build_dataset.py
+|   |-- merge_dataset.py
+|   |-- dataset_summary.py
 |
-
-|-- best_airway_mlp.pth
-
+|-- Corruption Generation
+|   |
+|   |-- corruption_generator.py
+|   |-- feature_corruption_generator.py
+|
+|-- Model Training
+|   |
+|   |-- train_mlp.py
+|
+|-- Generated Dataset
+|   |
+|   |-- branch_features.csv
+|   |-- branch_labels.csv
+|   |-- training_dataset.csv
+|   |-- training_dataset_feature_corruption.csv
+|
+|-- Trained Model
+    |
+    |-- best_airway_mlp.pth
+```
 
 ## Environment
 
@@ -407,10 +408,16 @@ University College London.
 
 ## Licence
 
-The source code developed in this repository is released under the MIT License.
+This repository contains code developed for the MSc Final Year Project.
 
-This licence applies only to the original code contained within this repository.
+The source code in this repository is provided for academic and research purposes.
 
-AirMorph, pretrained models, medical imaging datasets and other third-party resources remain subject to their respective licences and usage conditions.
+This repository does not include or redistribute AirMorph source code, pretrained models, medical imaging datasets, or any other external resources.
 
-Users are responsible for ensuring appropriate permissions for external datasets and dependencies.
+AirMorph is an external upstream project and remains subject to its original licence and usage conditions:
+
+https://github.com/EndoluminalSurgicalVision-IMR/AirMorph
+
+The medical imaging datasets and AirMorph-generated case outputs used during development are not distributed with this repository.
+
+Users are responsible for obtaining appropriate permissions for AirMorph, medical imaging data, pretrained models and other third-party dependencies before use.

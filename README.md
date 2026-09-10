@@ -165,39 +165,31 @@ The model receives 20 AirMorph branch-level features as input.
 
 Model structure:
 
-Input Layer
-
-20 AirMorph Features
-
-        |
-
-Linear Layer
-
-20 → 64
-
-        |
-
-ReLU
-
-        |
-
-Linear Layer
-
-64 → 32
-
-        |
-
-ReLU
-
-        |
-
-Linear Layer
-
-32 → 1
-
-        |
-
-Branch Quality Probability
+```text
+AirMorph Branch Features
+|
+|-- 20-Dimensional Feature Vector
+|
+v
+Hidden Layer 1
+|
+|-- Fully Connected: 20 → 64
+|-- ReLU
+|
+v
+Hidden Layer 2
+|
+|-- Fully Connected: 64 → 32
+|-- ReLU
+|
+v
+Output Layer
+|
+|-- Fully Connected: 32 → 1
+|
+v
+Branch Abnormality Probability
+```
 
 
 The model predicts the probability of a branch being structurally abnormal.

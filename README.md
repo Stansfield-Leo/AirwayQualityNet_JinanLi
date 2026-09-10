@@ -1,5 +1,5 @@
-```markdown
-# AirwayQualityNet: Branch-level Airway Structural Quality Assessment Based on AirMorph Features
+# AirwayQualityNet-JinanLi: 
+Branch-level Airway Structural Quality Assessment Based on AirMorph Features
 
 ## Overview
 
@@ -35,48 +35,32 @@ The main contributions of this repository include:
 
 ## Processing Workflow
 
-AirMorph Pipeline
-
-        |
-        v
-
-Airway Branch Feature Extraction
-
-        |
-        v
-
-airway_feature_cls.npy
-
-        |
-        v
-
-Dataset Construction
-
-        |
-        v
-
-branch_features.csv
-
-        |
-        v
-
+```text
+AirMorph Outputs
+|
+|-- Branch-Level Feature Files
+|
+v
+Branch Feature Extraction
+|
+v
+Branch-Level Dataset Construction
+|
+v
 Synthetic Corruption Generation
-
-        |
-        |
-        |-- Feature corruption
-        |
-        |-- Graph corruption baseline
-
-        |
-        v
-
-MLP-based Branch Quality Assessment
-
-        |
-        v
-
-Branch Abnormality Probability Score
+|
+v
+Training Dataset Preparation
+|
+v
+MLP-Based Branch Quality Assessment
+|
+v
+Branch Abnormality Probability Prediction
+|
+v
+Model Checkpoint and Evaluation Outputs
+```
 
 
 ## Input Description
@@ -438,4 +422,3 @@ This licence applies only to the original code contained within this repository.
 AirMorph, pretrained models, medical imaging datasets and other third-party resources remain subject to their respective licences and usage conditions.
 
 Users are responsible for ensuring appropriate permissions for external datasets and dependencies.
-```
